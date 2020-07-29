@@ -58,7 +58,7 @@ def get_steam_prices(conn, cursor):
             SELECT TOP 800 [app_id]
             FROM [Steam].[dbo].[app_ids]
             WHERE [entry_id] <= ?
-            ORDER BY [app_id] DESC;
+            ORDER BY [entry_id] DESC;
             """
         )
         df = pd.read_sql(
