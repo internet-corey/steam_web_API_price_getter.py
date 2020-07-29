@@ -68,7 +68,7 @@ def get_steam_prices(conn, cursor):
         )
 
         # turn aliases into a single comma-separated string to fit into API url
-        appid_list = df["alias_name"].tolist()
+        appid_list = df["app_id"].tolist()
         intlist = [int(i) for i in appid_list]
         appid_string = ""
         for appid in intlist:
